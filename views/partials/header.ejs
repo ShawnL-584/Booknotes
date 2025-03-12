@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>Shawn's Book Notes</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="left-section">
+        <img class="book-icon" src="/images/book-shelf-icon.png" alt="book-icon" />
+        <div class="header-title">Shawn's Book Notes</div>
+      </div>
+      <div class="right-section">
+        <div class="home-link">
+          <a href="/">Home</a>
+        </div>
+      </div>
+    </header>
+    <!-- search bar -->
+    <div class="search-section">
+      <form class="book-search" action="/search" method="get">
+        <input
+          name="search"
+          id="searchInput"
+          autocomplete="off"
+          class="search-bar"
+          type="text"
+          placeholder="Enter book name, author or ISBN"
+        />
+
+        <div class="dropdown">
+          <ul id="dropdownList"></ul>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<%- include('partials/header.ejs'); -%>
+
+<div class="books">
+  <form action="/updateReview">
+    <div class="book">
+      <input type="hidden" name="title" value="<%= locals.title %>" />
+      <input type="hidden" name="author" value="<%= locals.author %>" />
+      <input type="hidden" name="cover_id" value="<%= locals.cover_id %>" />
+      <input type="hidden" name="book_id" value="<%= locals.book_id %>" />
+      <!-- book cover picture -->
+      <div class="cover-container">
+        <% if (locals.cover_id == 0) { %>
+        <div class="blank_cover">
+          <div>
+            <h2><%= locals.title %></h2>
+            <h4>By <%= locals.author %></h4>
+          </div>
+        </div>
+        <% }else{ %>
+        <img src="//covers.openlibrary.org/b/id/<%= locals.cover_id %>-L.jpg" alt="book cover" />
+        <% }%>
+      </div>
+
+      <!-- book details -->
+      <div class="book-details">
+        <div class="title-author-container">
+          <h2><%= locals.title %></h2>
+          <h4>By <%= locals.author %></h4>
+        </div>
+
+        <!--  if review exists, edit review instead of write review -->
+        <% if (locals.review) { %>
+        <h3>Edit review :</h3>
+        <textarea name="review" id="review" cols="30" rows="10" required><%= review %></textarea>
+        <% } else { %>
+        <h3>Write review :</h3>
+        <textarea name="review" id="review" cols="30" rows="10" required></textarea>
+        <% } %>
+
+        <h3>Rating :</h3>
+        <div class="rating">
+          <input id="1" type="radio" name="rating" value="1" required />
+          <label for="1"><span class="fa fa-star"></span></label>
+          <input id="2" type="radio" name="rating" value="2" />
+          <label for="2"><span class="fa fa-star"></span></label>
+          <input id="3" type="radio" name="rating" value="3" />
+          <label for="3"><span class="fa fa-star"></span></label>
+          <input id="4" type="radio" name="rating" value="4" />
+          <label for="4"><span class="fa fa-star"></span></label>
+          <input id="5" type="radio" name="rating" value="5" />
+          <label for="5"><span class="fa fa-star"></span></label>
+        </div>
+        <div id="error-message" width="200px" style="color: red"></div>
+
+        <div class="button edit">
+          <% if(locals.review) {%>
+          <input onclick="validateForm()" type="submit" value="Update" formmethod="post" formaction="/updateReview" />
+          <% } else { %>
+          <input onclick="validateForm()" type="submit" value="Add review" formmethod="post" formaction="/addBook" />
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<%- include('partials/footer.ejs'); -%>

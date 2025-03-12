@@ -1,0 +1,74 @@
+<%- include('partials/header.ejs'); -%>
+
+<!-- sort -->
+<div class="sort-text">
+  <form action="/sort" method="post">
+    Sort by :
+    <label for="sort-title">
+      <input type="submit" name="sort" value="title" id="sort-title" hidden />
+      <a>Title</a></label
+    >,
+    <label for="sort-rating">
+      <input type="submit" name="sort" value="rating DESC" id="sort-rating" hidden />
+      <a>Ratings</a></label
+    >,
+    <label for="sort-date">
+      <input type="submit" name="sort" value="date DESC" id="sort-date" hidden />
+      <a>Date</a>
+    </label>
+  </form>
+</div>
+
+<hr />
+<!-- book area -->
+<% locals.data.forEach( (book) => { %>
+<div class="book-reviews">
+  <div class="book-cover">
+    <% if (book.cover_id == 0) { %>
+    <div class="blank_cover">
+      <div>
+        <h2><%= book.title %></h2>
+        <h4>By <%= book.author %></h4>
+      </div>
+    </div>
+    <% } else { %>
+    <img class="cover-img" src="//covers.openlibrary.org/b/id/<%= book.cover_id %>-L.jpg" alt="book cover" />
+    <% } %>
+  </div>
+
+  <div class="book-info">
+    <h2><%= book.title %></h2>
+
+    <h3>By <%= book.author %></h3>
+    <h3>Review:</h3>
+    <!-- <div class="review-text"><%= book.review %></div> -->
+    <div class="review-text"><%= book.review %></div>
+
+    <p>
+      <strong>Review Date: </strong>
+      <%= book.date %>
+    </p>
+    <div class="rating-stars">
+      <h3>Rating</h3>
+      <div class="rating">
+        <% for( let i = 0; i < book.rating; i++ ) { %>
+        <span class="fa fa-star checked"></span>
+        <% } %> <% if (book.rating<5) { %> <% for( let i = 0; i < (5 - book.rating); i++ ) { %>
+        <span class="fa fa-star"> <% } %> </span>
+        <% } %>
+      </div>
+    </div>
+
+    <div class="edit-delete-buttons">
+      <a href="/book?title=<%= book.title %>&author=<%= book.author %>&cover_id=<%= book.cover_id %>"
+        ><button>Edit</button></a
+      >
+      <form action="/delete" method="post" class="delete-button">
+        <input type="hidden" name="id" value="<%= book.id %>" />
+        <button type="submit" onclick="return confirm('Are you sure you want to delete?')">Delete</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<% }) %> <%- include('partials/footer.ejs'); -%>
