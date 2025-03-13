@@ -1,4 +1,4 @@
-# 📖 Booknotes  
+<img width="904" alt="image" src="https://github.com/user-attachments/assets/164b7af9-1dac-45ce-8edf-ab3deedd4734" /># 📖 Booknotes  
 *A personal book tracking and review app powered by the OpenLibrary API* 
 
 ## 🔗 Live Demo  
@@ -23,10 +23,11 @@
 ---
 
 ## 📷 Screenshots  
-![image](https://github.com/user-attachments/assets/6d3e354e-5ccd-4324-ab68-3162fb76d792)
-![image](https://github.com/user-attachments/assets/46410820-9fc3-49a0-9027-27696587b64a)
-![image](https://github.com/user-attachments/assets/d707f762-2ec6-452d-871c-40b31e44ad46)
-![image](https://github.com/user-attachments/assets/27990b39-837a-43d3-b66e-617ab064b923)
+<img width="1062" alt="image" src="https://github.com/user-attachments/assets/b6af73f1-a5bf-4b46-b29c-5a8d449a6a7d" />
+<img width="953" alt="image" src="https://github.com/user-attachments/assets/937e04b1-1758-49d8-a3ea-ffaebf5cdac1" />
+<img width="904" alt="image" src="https://github.com/user-attachments/assets/10a7b8ac-c174-4b6a-b234-e84a559b074e" />
+
+
 
 
 ---
