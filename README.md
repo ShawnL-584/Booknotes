@@ -1,4 +1,4 @@
-<img width="904" alt="image" src="https://github.com/user-attachments/assets/164b7af9-1dac-45ce-8edf-ab3deedd4734" /># 📖 Booknotes  
+# 📖 Booknotes  
 *A personal book tracking and review app powered by the OpenLibrary API* 
 
 ## 🔗 Live Demo  
