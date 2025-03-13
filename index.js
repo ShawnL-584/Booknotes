@@ -6,11 +6,14 @@ const app = express();
 const port = 3000;
 
 const db = new pg.Client({
-  user: "postgres",
-  host: "localhost",
-  database: "booknotes",
-  password: "shawnlin123",
+  user: "postgres1",
+  host: "dpg-cv8lmhi3esus73dgdt5g-a.oregon-postgres.render.com",
+  database: "booknotes_4ibu",
+  password: "YjZGqXRvTySfSXjpiPVZDFYxxJ1JkbgJ",
   port: 5432,
+  ssl: {
+    rejectUnauthorized: false, // This tells Node.js to bypass certificate validation. Use it for connecting to services like Render.
+  },
 });
 db.connect();
 
@@ -53,7 +56,6 @@ app.get("/book", async (req, res) => {
 
 app.post("/addBook", async (req, res) => {
   const { title, author, cover_id, review, rating } = req.body;
-  console.log(rating);
   try {
     await db.query("INSERT INTO books(cover_id, title, author, review, rating) VALUES($1,$2,$3,$4,$5)", [
       cover_id,
