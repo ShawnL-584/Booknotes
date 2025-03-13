@@ -1,17 +1,9 @@
 import bodyParser from "body-parser";
 import express from "express";
 import pg from "pg";
-import path from "path";
-import { fileURLToPath } from "url";
 
 const app = express();
 const port = 3000;
-
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
 
 const db = new pg.Client({
   user: "postgres1",
@@ -49,7 +41,7 @@ app.get("/book", async (req, res) => {
     const review = bookCheck ? bookCheck.review : undefined;
     const book_id = bookCheck ? bookCheck.id : undefined;
 
-    res.render("addbook.ejs", {
+    res.render("addBook.ejs", {
       title,
       author,
       cover_id,
