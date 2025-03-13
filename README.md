@@ -23,6 +23,7 @@
 ---
 
 ## 📷 Screenshots  
-*(Add images or GIFs of your app here)*  
+![image](https://github.com/user-attachments/assets/06a60b0c-cf52-466b-a9a5-c33b9a098bbc)
+
 
 ---
