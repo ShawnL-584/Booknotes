@@ -25,7 +25,8 @@
 ## 📷 Screenshots  
 <img width="907" alt="image" src="https://github.com/user-attachments/assets/45c205bd-c4f0-4e23-9afa-c495e5ee16e6" />
 <img width="907" alt="image" src="https://github.com/user-attachments/assets/392defe1-6afe-4293-9e65-ece11dbc82a8" />
-![Uploading image.png…]()
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/88b5d801-216f-428b-9640-faea82fc8f74" />
+
 
 
 
