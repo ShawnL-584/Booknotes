@@ -20,14 +20,13 @@ db.connect();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-let search;
 let sort = "id";
 
 app.get("/", async (req, res) => {
   try {
     const result = await db.query(`SELECT * FROM books ORDER BY ${sort};`);
     const data = result.rows;
-    res.render("index.ejs", { search: search, data: data });
+    res.render("index.ejs", { data: data });
   } catch (error) {
     console.log(error);
   }
