@@ -16,7 +16,7 @@
 
 ## 🛠 Tech Stack  
 - **Backend:** Node.js, Express.js, PostgreSQL  
-- **Frontend:** EJS, Bootstrap  
+- **Frontend:** EJS
 - **External API:** OpenLibrary API  
 - **Deployment:** Render  
 
