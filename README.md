@@ -2,7 +2,7 @@
 *A personal book tracking and review app powered by the OpenLibrary API* 
 
 ## 🔗 Live Demo  
-[**https://booknotes-nj5y.onrender.com/**](#)
+[**https://booknotes-nj5y.onrender.com/**](https://booknotes-nj5y.onrender.com/)
 
 ---
 
